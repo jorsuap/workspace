@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ShowInfoRoutingModule } from './show-info-routing.module';
 import { ShowInfoComponent } from './show-info.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MenuComponent
+  ],
   imports: [
     CommonModule,
     ShowInfoRoutingModule,

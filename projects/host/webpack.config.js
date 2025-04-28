@@ -27,15 +27,12 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
         library: { type: "module" },
-        remotes: {
-            mf: "mf@http://localhost:4242/remoteEntry.js",
-        },
 
         shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: '>=14.2.0 <=18.2.8' },
+          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: '>=14.2.0 <=18.2.8' },
+          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: '>=14.2.0 <=18.2.8' },
+          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: '>=14.2.0 <=18.2.8' },
 
           ...sharedMappings.getDescriptors()
         })
